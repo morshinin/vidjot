@@ -1,0 +1,7 @@
+.idea-card-controls {
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+.idea-card:hover .idea-card-controls {
+	opacity: 1;
+}
