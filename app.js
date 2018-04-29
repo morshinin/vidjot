@@ -17,8 +17,11 @@ const users = require('./routes/users')
 // Passport Config
 require('./config/passport')(passport);
 
+// DB Config
+const db = require('./config/database')
+
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/vidjot-dev')
+mongoose.connect(db.mongoURI)
 	.then(() => console.log('MongoDB connected...'))
 	.catch(err => console.log(err))
 
